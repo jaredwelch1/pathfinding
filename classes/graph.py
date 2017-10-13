@@ -76,3 +76,12 @@ class graph(object):
 		if src_key in self.nodes and dst_key in self.nodes:
 			src_node = self.nodes[src_key]
 			src_node.add_edge(dst_key, weight)
+
+	def get_node(self, key):
+		'''
+			get the node identified by key 
+		'''
+		if key in self.nodes:
+			return self.nodes[key]
+		else:
+			return None

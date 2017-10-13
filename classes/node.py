@@ -48,7 +48,7 @@ class node(object):
 			edge objects rather than a dictionary...
 		'''
 		
-		return iter([self.edges])
+		return iter(self.edges)
 
 
 	def add_attr(self, attr, val=None):

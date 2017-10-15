@@ -1,4 +1,4 @@
-from node import node as Node
+from .node import node as Node
 
 class graph(object):
 	'''

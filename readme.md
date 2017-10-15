@@ -10,4 +10,7 @@
 		- proper edge list return from interables (i. e. , edge value when expected vs tuple vs object)
 
 - Pathfinding algorithms implemented, with possible test cases?
+- Make file and import other paths using os.dir so that graph library can be imported 
+- pip stuff?
 - visualizations that show the algorithms as they iterate over the graph 
+

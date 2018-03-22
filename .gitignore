@@ -1,4 +1,4 @@
-# ignore __pycache__ 
+# ignore __pycache__
 __pycache__
 
 # build files
@@ -6,3 +6,12 @@ build/
 
 # pip stuff
 pathfinding.egg-info/
+
+# virtual env
+pathfind_env/
+
+# byte code
+*.pyc
+
+# jupyter
+*.ipynb*

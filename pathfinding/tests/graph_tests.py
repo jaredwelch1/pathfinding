@@ -1,15 +1,12 @@
 import sys
 import unittest
-
-sys.path.insert(0, '../classes')
-from graph import graph
+from pathfinding import Graph
 
 
-
-class graphTests(unittest.TestCase):
+class GraphTests(unittest.TestCase):
 
 	def test_length(self):
-		self.assertEqual(5, len(graph([1,2,3,4,5])))
+		self.assertEqual(5, len(Graph([1,2,3,4,5])))
 
 if __name__ == '__main__':
 	unittest.main()

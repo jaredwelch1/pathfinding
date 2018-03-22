@@ -1,6 +1,6 @@
-from .node import node as Node
+from .node import Node
 
-class graph(object):
+class Graph(object):
 	'''
 	A graph class representation for use with pathfindng algorithms. Will use hashable object
 	as the key to identify nodes.
@@ -17,7 +17,7 @@ class graph(object):
 		'''
 			Graph object constructor
 
-			key_list: optional list of node keys to initialize the graph with 
+			key_list: optional list of node keys to initialize the graph with
 
 		'''
 
@@ -28,18 +28,18 @@ class graph(object):
 
 	def __iter__(self):
 		'''
-			to make it easy to loop over nodes in the graph 
+			to make it easy to loop over nodes in the graph
 			ex: for node in graph
 
-			mostly should be used to label, add data, add attributes etc., to all nodes in graph. 
+			mostly should be used to label, add data, add attributes etc., to all nodes in graph.
 			NOT really meant for traversal, as this pays no mind to edges, simply the order
-			that they appear in the node dictionairy 
+			that they appear in the node dictionairy
 		'''
 		return iter([self.nodes[key] for key in self.nodes])
 
 	def __len__(self):
 		'''
-			Will return the count of nodes in the graph. 
+			Will return the count of nodes in the graph.
 		'''
 		return len(self.nodes)
 
@@ -65,21 +65,21 @@ class graph(object):
 
 	def add_edge(self, src_key, dst_key, weight=None):
 		'''
-			add an edge between two nodes 
+			add an edge between two nodes
 
 			src_key - key for node that edge starts at
-			dst_key - key for node that edge ends at 
-			weight 	- optional argument to assign a weight to an edge 
+			dst_key - key for node that edge ends at
+			weight 	- optional argument to assign a weight to an edge
 
 		'''
 
 		if src_key in self.nodes and dst_key in self.nodes:
 			src_node = self.nodes[src_key]
-			src_node.add_edge(dst_key, weight)
+			src_node.attach_edge(dst_key, weight)
 
 	def get_node(self, key):
 		'''
-			get the node identified by key 
+			get the node identified by key
 		'''
 		if key in self.nodes:
 			return self.nodes[key]

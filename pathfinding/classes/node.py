@@ -54,13 +54,14 @@ class Node(object):
 	def add_attr(self, attr, val=None):
 		if val is not None:
 			self.attributes[attr] = val
-		self.attributes[attr] = None
+		else:
+			self.attributes[attr] = None
 
 	def has_attr(self, attr):
 		return attr in self.attributes
 
 	def attach_edge(self, dest_node_key, weight=None):
-		self.edges.append(edge(dest_node_key, weight))
+		self.edges.append(Edge(dest_node_key, weight))
 
 	''' TODO: add insert_edges() which takes in a dict of key:weight pairs (key of destination node from src node) '''
 

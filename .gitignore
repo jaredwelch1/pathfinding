@@ -15,3 +15,6 @@ pathfind_env/
 
 # jupyter
 *.ipynb*
+
+# virtual env
+pathfinding_env/
